@@ -1,0 +1,545 @@
+/* 
+ * popup.css
+ * 
+ * Defines the modern dark-mode glassmorphism visual style for the popup UI.
+ * Completely redesigned around the new brand identity: #ff24ab (magenta/pink).
+ * Heavily upgraded with smooth transitions, entrance animations, and micro-interactions.
+ * All texts are configured to be non-selectable.
+ */
+
+:root {
+    /* Color themes and styling tokens based on #ff24ab */
+    --bg-gradient: linear-gradient(135deg, #0d0107 0%, #170410 50%, #050003 100%);
+    --accent-glow: radial-gradient(circle at center, rgba(255, 36, 171, 0.12) 0%, transparent 70%);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.07);
+    --text-primary: #ffffff;
+    --text-secondary: #a395a0;
+    --active-color: #ff24ab;
+    --active-glow: rgba(255, 36, 171, 0.4);
+    --inactive-color: #5e4a55;
+    --inactive-glow: rgba(94, 74, 85, 0.3);
+    --button-bg: rgba(255, 255, 255, 0.04);
+    --button-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Prevents the user from selecting any text on the popup interface */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    /* Prevents the user from dragging elements (like images or links) */
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    width: 310px;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+ * ANIMATION 1: Drifting Background Aura.
+ * Creates a floating colorful background light that moves slowly in the background.
+ */
+@keyframes drift {
+    0% { transform: translate(-50%, -50%) translate(-15px, -15px) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) translate(15px, 15px) rotate(180deg); }
+    100% { transform: translate(-50%, -50%) translate(-15px, -15px) rotate(360deg); }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    height: 310px;
+    background: var(--accent-glow);
+    z-index: 0;
+    pointer-events: none;
+    animation: drift 12s ease-in-out infinite alternate;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* 
+ * ANIMATION 2: Staggered Entrance Fade-In.
+ * Elements slide up and fade in one by one when the popup loads.
+ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, .status-card, .toggle-container, .info-section, .links-section, footer {
+    opacity: 0;
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+header { animation-delay: 0.05s; }
+.status-card { animation-delay: 0.12s; }
+.toggle-container { animation-delay: 0.18s; }
+.info-section { animation-delay: 0.24s; }
+.links-section { animation-delay: 0.3s; }
+footer { animation-delay: 0.36s; }
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 85px;
+}
+
+/* 
+ * ANIMATION 3: Logo Brand Float.
+ * Make the branding logo image float up and down gently.
+ */
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.02); }
+}
+
+.logo-image {
+    height: 80px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 36, 171, 0.45));
+    animation: float 3s ease-in-out infinite;
+    transition: filter 0.3s ease;
+}
+
+.logo-image:hover {
+    filter: drop-shadow(0 0 14px rgba(255, 36, 171, 0.65));
+}
+
+.subtitle {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.badge {
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+.badge.version {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge.license {
+    background: rgba(255, 36, 171, 0.1);
+    color: var(--active-color);
+    border: 1px solid rgba(255, 36, 171, 0.25);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Status Indicator Box */
+.status-card {
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.status-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 36, 171, 0.15);
+}
+
+.status-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.status-value {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.status-value.active {
+    color: var(--active-color);
+    text-shadow: 0 0 8px var(--active-glow);
+}
+
+.status-value.inactive {
+    color: var(--text-secondary);
+    text-shadow: none;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+/* 
+ * ANIMATION 5: Breathing Status LED Pulse.
+ * A glowing breathing cycle that represents state activity.
+ */
+@keyframes activePulse {
+    0%, 100% { box-shadow: 0 0 10px 2px var(--active-color); }
+    50% { box-shadow: 0 0 16px 5px var(--active-color); }
+}
+
+.status-dot.active {
+    background: var(--active-color);
+    animation: activePulse 2s infinite ease-in-out;
+}
+
+.status-dot.inactive {
+    background: var(--inactive-color);
+    box-shadow: none;
+}
+
+/* Toggle Switch Control */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 36px;
+    transition: transform 0.2s ease;
+}
+
+.switch:hover {
+    transform: scale(1.05);
+}
+
+.switch:active {
+    transform: scale(0.95);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: .4s;
+    border-radius: 34px;
+    overflow: hidden;
+}
+
+/* 
+ * ANIMATION 7: Elastic Toggle Nob.
+ * Uses a cubic-bezier transition curves to make the switch bounce when toggled.
+ */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color 0.4s ease;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.slider-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--active-color), #ff73cd);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    border-color: transparent;
+}
+
+input:checked + .slider .slider-glow {
+    opacity: 1;
+}
+
+input:checked + .slider::before {
+    transform: translateX(32px);
+    background-color: #0d0107;
+}
+
+/* Info Grid Section */
+.info-section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.info-section:hover {
+    border-color: rgba(255, 36, 171, 0.15);
+}
+
+.section-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.scope-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.scope-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid transparent;
+    /* Transition for scaling up on hover */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 
+ * ANIMATION 8: Scope Card Expansion.
+ * Hovering scales the items and gives them a glass glow.
+ */
+.scope-item:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 36, 171, 0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+ * ANIMATION 9: Icon Pop-Up.
+ * Animates the icon on hover.
+ */
+@keyframes iconPop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3) rotate(8deg); }
+}
+
+.scope-item:hover .scope-icon {
+    animation: iconPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scope-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.scope-details h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.scope-details p {
+    font-size: 10px;
+    color: var(--text-secondary);
+}
+
+.scope-item.blocked h3 {
+    color: #ff66b2; /* Soft pink block text */
+}
+
+.scope-item.preserved h3 {
+    color: #ffc2eb; /* Soft pastel pink preserved text */
+}
+
+/* Links & Action Buttons */
+.links-section {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    /* Complete transition settings for smooth animations */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 
+ * ANIMATION 10: Button Hover Lift and Glowing Shadows.
+ * Elevates and casts themed drop-shadow glows corresponding to target links.
+ */
+.action-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.action-btn:active {
+    transform: translateY(1px);
+}
+
+.github-btn:hover {
+    box-shadow: 0 5px 15px rgba(255, 36, 171, 0.35);
+    border-color: rgba(255, 36, 171, 0.5);
+}
+
+.dev-btn:hover {
+    box-shadow: 0 5px 15px rgba(255, 115, 205, 0.35);
+    border-color: rgba(255, 115, 205, 0.5);
+}
+
+/* 
+ * ANIMATION 11: Button Icon Nudging.
+ * Nudges the icon of button to the right continuously when hovered.
+ */
+@keyframes btnNudge {
+    0% { transform: scale(1) translateX(0); }
+    100% { transform: scale(1.1) translateX(3px); }
+}
+
+.action-btn:hover .btn-icon {
+    animation: btnNudge 0.5s ease-in-out infinite alternate;
+}
+
+.btn-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Footer & Author details */
+footer {
+    font-size: 9px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-top: 1px solid var(--card-border);
+    padding-top: 8px;
+    width: 100%;
+}
+
+.author-name {
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 
+ * ANIMATION 12: Author Name Glow.
+ * Highlights the author's name with a soft neon glow on hover.
+ */
+.author-name:hover {
+    color: var(--active-color);
+    text-shadow: 0 0 6px var(--active-glow);
+    cursor: pointer;
+}
+
+.copyright-notice {
+    font-size: 7px;
+    color: var(--text-secondary);
+    opacity: 0.55;
+    margin-top: 4px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}

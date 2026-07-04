@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "NoCaret",
+  "version": "1.2",
+  "description": "An open-source extension that completely hides the blinking text caret on video players, images, and empty spaces in Firefox.",
+  "developer": {
+    "name": "Atilla Yalın Öksüz",
+    "url": "https://github.com/atilla-yalin-oksuz"
+  },
+  "homepage_url": "https://github.com/atilla-yalin-oksuz/NoCaret",
+  "icons": {
+    "16": "Logo/3.png",
+    "32": "Logo/3.png",
+    "48": "Logo/3.png",
+    "128": "Logo/3.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Logo/3.png",
+      "32": "Logo/3.png",
+      "48": "Logo/3.png",
+      "128": "Logo/3.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["nocaret.css"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nocaret@extension.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

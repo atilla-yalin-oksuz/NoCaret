@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoCaret Settings</title>
+    <!-- Importing 'Outfit' Google Font to give the extension a premium, high-quality look -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER: Brand branding area (Logo image, Subtitle, and Version Badges) -->
+        <header>
+            <div class="logo-container">
+                <!-- Using Logo/3.png as our primary branding logo image -->
+                <img src="Logo/3.png" alt="NoCaret Logo" class="logo-image">
+            </div>
+            <p class="subtitle">Firefox Caret Blocker</p>
+            <div class="badge-container">
+                <!-- Badges representing the version and open-source status -->
+                <span class="badge version">v1.2</span>
+                <span class="badge license">Open Source</span>
+            </div>
+        </header>
+
+        <!-- MAIN: Control panel elements -->
+        <main>
+            <!-- Status Card: Displays a visual active/inactive status text and glowing dot -->
+            <div class="status-card">
+                <div class="status-info">
+                    <span class="status-label">Status:</span>
+                    <!-- The value text (Active / Standby) changes dynamically via popup.js -->
+                    <span id="status-text" class="status-value active">ACTIVE</span>
+                </div>
+                <div class="status-dot-container">
+                    <!-- The LED dot color changes and glows dynamically via popup.js -->
+                    <span id="status-dot" class="status-dot active"></span>
+                </div>
+            </div>
+
+            <!-- Toggle Switch Container: The main power switch button -->
+            <div class="toggle-container">
+                <label class="switch">
+                    <!-- Checkbox that saves state when checked or unchecked -->
+                    <input type="checkbox" id="power-toggle" checked>
+                    <!-- Visual slider slider background with neon gradient glow effects -->
+                    <span class="slider">
+                        <span class="slider-glow"></span>
+                    </span>
+                </label>
+            </div>
+
+            <!-- Features Grid: Describes what elements are targeted and what elements are protected -->
+            <div class="info-section">
+                <h2 class="section-title">PROTECTION SCOPE</h2>
+                <div class="scope-grid">
+                    <!-- Blocked scope item (Caret is hidden here) -->
+                    <div class="scope-item blocked">
+                        <span class="scope-icon">🚫</span>
+                        <div class="scope-details">
+                            <h3>Hidden on</h3>
+                            <p>Videos, Images, Empty spaces</p>
+                        </div>
+                    </div>
+                    <!-- Preserved scope item (Caret is active/visible here) -->
+                    <div class="scope-item preserved">
+                        <span class="scope-icon">✓</span>
+                        <div class="scope-details">
+                            <h3>Active in</h3>
+                            <p>Inputs, Textareas, Editors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons: Hyperlinks linking to the open source project and developer profiles -->
+            <div class="links-section">
+                <a href="https://github.com/atilla-yalin-oksuz/NoCaret" class="action-btn github-btn">
+                    <span class="btn-icon">📁</span> Source Code
+                </a>
+                <a href="https://github.com/atilla-yalin-oksuz" class="action-btn dev-btn">
+                    <span class="btn-icon">👤</span> Developer
+                </a>
+            </div>
+        </main>
+
+        <!-- FOOTER: Attribution and developer branding details -->
+        <footer>
+            <p>Developed by <span class="author-name">Atilla Yalın Öksüz</span></p>
+            <p class="copyright-notice">© 2026 Atilla Yalın Öksüz • CC BY-NC 4.0</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

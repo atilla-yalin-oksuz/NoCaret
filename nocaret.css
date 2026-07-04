@@ -1,0 +1,54 @@
+/* 
+ * nocaret.css
+ * 
+ * This stylesheet is automatically injected into every single webpage you open.
+ * Its purpose is to hide the blinking text caret (cursor) on non-editable elements,
+ * while ensuring that caret behavior is preserved on text inputs and editable text areas.
+ */
+
+/* 
+ * RULE 1: Hide the caret globally on non-editable elements.
+ * 
+ * Condition:
+ * 'html:not(.nocaret-disabled)' checks if the extension is currently enabled.
+ * If the user disables NoCaret in the popup menu, a '.nocaret-disabled' class is
+ * added to the <html> tag, which prevents this selector from matching.
+ * 
+ * Filters:
+ * We target all elements (*) on the page EXCEPT:
+ * - <input> (single-line text boxes)
+ * - <textarea> (multi-line text boxes)
+ * - [contenteditable="true"], [contenteditable=""], [contenteditable="plaintext-only"] (rich-text editors like Google Docs, Notion, etc.)
+ * - :read-write (any element that is natively writeable by the user)
+ * 
+ * Action:
+ * We set 'caret-color: transparent !important' to make the caret invisible.
+ * '!important' forces the browser to prioritize our rule over default styles.
+ */
+html:not(.nocaret-disabled) *:not(input):not(textarea):not([contenteditable="true"]):not([contenteditable=""]):not([contenteditable="plaintext-only"]):not(:read-write) {
+    caret-color: transparent !important;
+}
+
+/* 
+ * RULE 2: Restore the default caret color for editable elements.
+ * 
+ * Condition:
+ * Applied only when the extension is active.
+ * 
+ * Targets:
+ * All input elements, textareas, contenteditable components, and active read-write zones.
+ * 
+ * Action:
+ * We reset 'caret-color: auto' to restore the default browser styling.
+ * NOTICE: We DO NOT use '!important' here. This is crucial because it allows the 
+ * website's own stylesheet to override 'auto' and display custom (e.g., colored) carets 
+ * if the site has custom input styles (like input { caret-color: purple }).
+ */
+html:not(.nocaret-disabled) input,
+html:not(.nocaret-disabled) textarea,
+html:not(.nocaret-disabled) [contenteditable="true"],
+html:not(.nocaret-disabled) [contenteditable=""],
+html:not(.nocaret-disabled) [contenteditable="plaintext-only"],
+html:not(.nocaret-disabled) :read-write {
+    caret-color: auto;
+}
