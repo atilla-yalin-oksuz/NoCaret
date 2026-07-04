@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Firefox-v109+-FF7139?style=flat-square&logo=Firefox-Browser&logoColor=white" alt="Firefox Compatibility" />
   <img src="https://img.shields.io/badge/Manifest-V3-brightgreen?style=flat-square" alt="Manifest V3" />
-  <img src="https://img.shields.io/badge/License-CC_BY--NC_4.0-ff24ab?style=flat-square" alt="CC BY-NC 4.0 License" />
+  <img src="https://img.shields.io/badge/License-All__Rights__Reserved-red?style=flat-square" alt="All Rights Reserved License" />
   <img src="https://img.shields.io/badge/Status-Developer__Preview-orange?style=flat-square" alt="Status" />
 </p>
 
@@ -108,39 +108,22 @@ To load the WebExtension locally for development purposes:
 ## 🤝 Contribution Guidelines
 We highly value community contributions! As long as your changes are intended for **non-commercial** purposes, feel free to submit Pull Requests (PRs), open issues, or suggest improvements to help make NoCaret better.
 
+*Note: By submitting a Pull Request, you agree to grant the author (Atilla Yalın Öksüz) an irrevocable, perpetual, worldwide, and royalty-free license to use, modify, and distribute your contribution under the terms of this project's license.*
+
 ---
 
 ## ⚖️ License & Copyright
 
-### License Model
+**Copyright © 2026 Atilla Yalın Öksüz. All rights reserved.**
 
-This project is licensed under the terms of the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
-- [CC BY-NC 4.0 License details (English)](https://creativecommons.org/licenses/by-nc/4.0/)
+This project and all associated source code and assets are the exclusive property of Atilla Yalın Öksüz. 
+Except as expressly permitted by the GitHub Terms of Service (such as viewing and forking within the GitHub platform), no one is allowed to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software without prior written consent from the author.
 
-### Quick Rules Summary
-
-| Allowed | Forbidden |
-| :--- | :--- |
-| ✔ **Personal Use** | ✖ **Commercialization** (Commercial sales or integration) |
-| ✔ **Attribution Sharing** | ✖ **Uncredited Reposting** (Sharing without source) |
-| ✔ **Open Source Contributions** | ✖ **Commercial Derivations** (Derivative works for profit) |
-
----
-
-**Copyright © 2026 Atilla Yalın Öksüz.**
-
-Redistribution, modification, and use of this software, in source or binary forms, are permitted under the CC BY-NC 4.0 license. Additionally, the following specific terms apply:
-
-1. **Non-Commercial Use Only:** The software, source code, design parameters, or derivative works may **not** be integrated, redistributed, or sold for commercial purposes, business integrations, or financial gain without explicit prior written consent from the author.
-2. **Attribution & Credit:** Any redistribution of this source code or derivative works must retain the original copyright notice above, developer credits, a license reference, and a direct hyperlink linking back to the [NoCaret GitHub Repository](https://github.com/atilla-yalin-oksuz/NoCaret).
-3. **License Modification Rights:** The developer reserves the right to apply different licensing terms for any **future** versions or releases of this software. The licensing of previously distributed versions remains unaffected and irrevocable.
-4. **No Warranty & Liability Limits:** The software is provided "as is". Except in cases of willful intent or gross negligence, the author assumes no responsibility or liability for any errors, defects, or damages resulting from the use of this software.
-5. **Governing Law & Jurisdiction:** Any legal disputes arising from this software shall be governed by the laws of the Republic of Turkey, and the courts of Istanbul shall have exclusive jurisdiction.
+**Governing Law & Jurisdiction:** Any legal disputes arising from this software shall be governed by the laws of the Republic of Turkey, and the courts of Antalya shall have exclusive jurisdiction.
 
 ### Legal Representative Approval
-I, as the parent / legal representative of the developer Atilla Yalın Öksüz, hereby grant full consent and approval to the licensing, open-source distribution, and publishing terms of this software under the CC BY-NC 4.0 license and the additional specific terms specified herein.
+I, as the parent / legal representative of the developer Atilla Yalın Öksüz, hereby grant full consent and approval to the publishing terms and rights retention of this software under the specific terms specified herein.
 - **Legal Representative:** Verified and Approved by Parent/Guardian
-
 ---
 
 ## 👥 Creator Details
@@ -245,39 +228,22 @@ WebExtension'ı geliştirme amacıyla yerel olarak yüklemek için:
 ## 🤝 Katkıda Bulunma Rehberi
 Topluluk katkılarına büyük değer veriyoruz! Değişiklikleriniz **ticari olmayan** amaçlar taşıdığı sürece, NoCaret eklentisini geliştirmek için Pull Request (PR) gönderebilir, hata bildirimleri oluşturabilir veya geliştirme önerilerinde bulunabilirsiniz.
 
+*Not: Bir Pull Request (PR) göndererek, katkınızın bu projenin lisans şartları altında yazar (Atilla Yalın Öksüz) tarafından kullanılmasına, değiştirilmesine ve dağıtılmasına geri alınamaz, süresiz, dünya çapında ve telifsiz bir lisans vermiş olursunuz.*
+
 ---
 
 ## ⚖️ Lisans & Telif Hakkı
 
-### Lisans Modeli
+**Telif Hakkı © 2026 Atilla Yalın Öksüz. Tüm hakları saklıdır.**
 
-Bu proje, **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** lisans koşulları altında lisanslanmıştır.
-- [CC BY-NC 4.0 Lisans detayları (Türkçe)](https://creativecommons.org/licenses/by-nc/4.0/deed.tr)
+Bu proje ve ilişkili tüm kaynak kodları ile materyallerin tek ve mutlak sahibi Atilla Yalın Öksüz'dür.
+GitHub Hizmet Şartları'nın açıkça izin verdiği durumlar (GitHub platformu dahilinde görüntüleme ve fork etme gibi) hariç olmak üzere; yazarın önceden verilmiş yazılı izni olmaksızın bu yazılımın kullanılması, kopyalanması, değiştirilmesi, birleştirilmesi, yayımlanması, dağıtılması, alt lisanslanması ve/veya satılması kesinlikle yasaktır.
 
-### Hızlı Kurallar Özeti
-
-| İzin Verilenler | Yasak Olanlar |
-| :--- | :--- |
-| ✔ **Kişisel Kullanım** | ✖ **Ticari Kullanım** (Ticari satış veya entegrasyon) |
-| ✔ **Atıf Vererek Paylaşım** | ✖ **Kredisiz Paylaşım** (Kaynak göstermeden paylaşma) |
-| ✔ **Açık Kaynak Katkısı** | ✖ **Ticari Türevler** (Kâr amaçlı türev çalışmalar) |
-
----
-
-**Telif Hakkı © 2026 Atilla Yalın Öksüz.**
-
-Bu yazılımın kaynak veya ikili (binary) formlarda yeniden dağıtılmasına, değiştirilmesine ve kullanılmasına CC BY-NC 4.0 lisansı altında izin verilir. Buna ek olarak, yazar tarafından belirlenen aşağıdaki özel şartlar geçerlidir:
-
-1. **Ticari Olmayan Kullanım:** Bu yazılım, kaynak kodu, tasarım parametreleri veya türev çalışmaları; yazarın açık yazılı izni olmaksızın ticari amaçlarla, kurumsal entegrasyonlarda veya finansal kazanç amacıyla entegre edilemez, yeniden dağıtılamaz veya satılamaz.
-2. **Atıf ve Kredi:** Bu kaynak kodun veya türev çalışmalarının her türlü yeniden dağıtımı; yukarıdaki telif hakkı bildirimini, geliştirici kredilerini, lisans referansını ve doğrudan [NoCaret GitHub Deposuna](https://github.com/atilla-yalin-oksuz/NoCaret) yönlendiren bir köprüyü (linki) barındırmak zorundadır.
-3. **Lisans Değişiklik Hakları:** Geliştirici, bu yazılımın gelecekte yayınlanacak **yeni** sürümleri için lisans koşullarını dilediği zaman değiştirme veya güncelleme hakkını saklı tutar. Geçmişte bu lisansla dağıtılmış mevcut sürümlerin hakları saklı kalır ve iptal edilemez.
-4. **Garanti Yoktur ve Sorumluluk Sınırı:** Yazılım "olduğu gibi" sunulmaktadır. Kast ve ağır ihmal durumları hariç olmak üzere yazar, bu yazılımın kullanımından kaynaklanabilecek herhangi bir hata, kusur veya zarardan dolayı hiçbir sorumluluk veya yükümlülük kabul etmez.
-5. **Uygulanacak Hukuk ve Yetkili Mahkeme:** Bu yazılımdan doğabilecek her türlü hukuki uyuşmazlıkta Türkiye Cumhuriyeti kanunları uygulanacak olup, İstanbul Mahkemeleri ve İcra Daireleri kesin yetkilidir.
+**Uygulanacak Hukuk ve Yetkili Mahkeme:** Bu yazılımdan doğabilecek her türlü hukuki uyuşmazlıkta Türkiye Cumhuriyeti kanunları uygulanacak olup, Antalya Mahkemeleri ve İcra Daireleri kesin yetkilidir.
 
 ### Yasal Temsilci Onayı
-Geliştirici Atilla Yalın Öksüz'ün velisi / yasal temsilcisi olarak, bu yazılımın CC BY-NC 4.0 lisansı ve burada belirtilen ek özel şartlar altında açık kaynaklı olarak dağıtılmasına, lisanslanmasına ve yayınlanmasına tam yetki ve onay veriyorum.
+Geliştirici Atilla Yalın Öksüz'ün velisi / yasal temsilcisi olarak, bu yazılımın haklarının saklı tutulmasına, GitHub üzerinde yayınlanmasına ve burada belirtilen tüm özel şartlara tam yetki ve onay veriyorum.
 - **Yasal Temsilci:** Veli Tarafından Doğrulanmış ve Onaylanmıştır
-
 ---
 
 ## 👥 Geliştirici Bilgileri
