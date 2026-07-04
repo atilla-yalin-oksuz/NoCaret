@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Firefox-v109+-FF7139?style=flat-square&logo=Firefox-Browser&logoColor=white" alt="Firefox Compatibility" />
+  <img src="https://img.shields.io/badge/Firefox-v140+-FF7139?style=flat-square&logo=Firefox-Browser&logoColor=white" alt="Firefox Compatibility" />
   <img src="https://img.shields.io/badge/Manifest-V3-brightgreen?style=flat-square" alt="Manifest V3" />
   <img src="https://img.shields.io/badge/License-All__Rights__Reserved-red?style=flat-square" alt="All Rights Reserved License" />
   <img src="https://img.shields.io/badge/Status-Developer__Preview-orange?style=flat-square" alt="Status" />
@@ -43,7 +43,7 @@ In Firefox (Gecko layout engine), clicking on non-editable elements such as medi
 | **Execution Latency** | `0ms` (Natively evaluated on browser style-matching cycles) |
 | **Memory Footprint** | `< 1.2 MB` (Extremely lightweight execution state) |
 | **CPU Utilization** | `0%` (Zero active event loops or polling processes) |
-| **Firefox Compatibility** | `v109+` (Fully configured under Manifest V3 specifications) |
+| **Firefox Compatibility** | `v140+` (Desktop) / `v142+` (Android) — Fully configured under Manifest V3 specifications |
 
 ---
 
@@ -164,7 +164,7 @@ Firefox'ta (Gecko tasarım motoru), medya oynatıcıları, resimler veya yapısa
 | **Çalışma Gecikmesi** | `0ms` (Tarayıcı stil eşleme döngülerinde doğal olarak çalışır) |
 | **Bellek Kullanımı** | `< 1.2 MB` (Son derece hafif çalışma durumu) |
 | **İşlemci Kullanımı** | `0%` (Aktif olay döngüsü veya sorgulama içermez) |
-| **Firefox Uyumluluğu** | `v109+` (Manifest V3 spesifikasyonlarına göre yapılandırılmıştır) |
+| **Firefox Uyumluluğu** | `v140+` (Masaüstü) / `v142+` (Android) — Manifest V3 spesifikasyonlarına göre yapılandırılmıştır |
 
 ---
 
