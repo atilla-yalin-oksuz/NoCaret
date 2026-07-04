@@ -9,10 +9,10 @@
   },
   "homepage_url": "https://github.com/atilla-yalin-oksuz/NoCaret",
   "icons": {
-    "16": "Logo/3.png",
-    "32": "Logo/3.png",
-    "48": "Logo/3.png",
-    "128": "Logo/3.png"
+    "16": "Logo/icon16.png",
+    "32": "Logo/icon32.png",
+    "48": "Logo/icon48.png",
+    "128": "Logo/icon128.png"
   },
   "permissions": [
     "storage"
@@ -20,10 +20,10 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "Logo/3.png",
-      "32": "Logo/3.png",
-      "48": "Logo/3.png",
-      "128": "Logo/3.png"
+      "16": "Logo/icon16.png",
+      "32": "Logo/icon32.png",
+      "48": "Logo/icon48.png",
+      "128": "Logo/icon128.png"
     }
   },
   "content_scripts": [
@@ -38,7 +38,12 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "nocaret@extension.local",
-      "strict_min_version": "109.0"
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [],
+        "optional": []
+      }
     }
   }
 }
+
