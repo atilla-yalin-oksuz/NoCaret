@@ -121,6 +121,7 @@ Except as expressly permitted by the GitHub Terms of Service (such as viewing an
 
 **Governing Law & Jurisdiction:** Any legal disputes arising from this software shall be governed by the laws of the Republic of Turkey, and the courts of Antalya shall have exclusive jurisdiction.
 
+[📖 View Full License Details](https://github.com/atilla-yalin-oksuz/NoCaret/blob/main/LICENSE)
 ### Legal Representative Approval
 I, as the parent / legal representative of the developer Atilla Yalın Öksüz, hereby grant full consent and approval to the publishing terms and rights retention of this software under the specific terms specified herein.
 - **Legal Representative:** Verified and Approved by Parent/Guardian
@@ -241,6 +242,7 @@ GitHub Hizmet Şartları'nın açıkça izin verdiği durumlar (GitHub platformu
 
 **Uygulanacak Hukuk ve Yetkili Mahkeme:** Bu yazılımdan doğabilecek her türlü hukuki uyuşmazlıkta Türkiye Cumhuriyeti kanunları uygulanacak olup, Antalya Mahkemeleri ve İcra Daireleri kesin yetkilidir.
 
+[📖 Detaylı Lisans Metnini Görüntüle](https://github.com/atilla-yalin-oksuz/NoCaret/blob/main/LICENSE)
 ### Yasal Temsilci Onayı
 Geliştirici Atilla Yalın Öksüz'ün velisi / yasal temsilcisi olarak, bu yazılımın haklarının saklı tutulmasına, GitHub üzerinde yayınlanmasına ve burada belirtilen tüm özel şartlara tam yetki ve onay veriyorum.
 - **Yasal Temsilci:** Veli Tarafından Doğrulanmış ve Onaylanmıştır
